@@ -11,6 +11,7 @@ type Props = {
   title?: string;
   items: Item[];
   priority?: boolean;
+  viewAll?: boolean;
 };
 
 const ContentGrid = ({
@@ -18,12 +19,16 @@ const ContentGrid = ({
   items,
   collection,
   priority = false,
+  viewAll = false,
 }: Props) => {
   return (
     <section id={collection}>
-      <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight capitalize">
-        {title}
-      </h2>
+      <div className="flex gap-8 items-center">
+        <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight capitalize">
+          {title}
+        </h2>
+        {viewAll ? <Link href={`/${collection}`}>View all</Link> : null}
+      </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 lg:gap-x-8 gap-y-5 sm:gap-y-6 lg:gap-y-8 mb-8">
         {items.map((item, id) => (
           <Link key={item.slug} href={`/${collection}/${item.slug}`}>
@@ -31,7 +36,7 @@ const ContentGrid = ({
               <div className="sm:mx-0">
                 <Image
                   src={item.coverImage || `/api/og?title=${item.title}`}
-                  alt={`Cover Image for ${item.title}`}
+                  alt=""
                   className="object-cover object-center w-full h-auto"
                   width={0}
                   height={0}

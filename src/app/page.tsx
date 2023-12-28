@@ -21,6 +21,7 @@ export default async function Index() {
             items={allPosts}
             collection="posts"
             priority
+            viewAll
           />
         )}
         {Object.keys(otherCollections).map((collection) => {
@@ -31,6 +32,7 @@ export default async function Index() {
               title={collection}
               items={otherCollections[collection]}
               collection={collection}
+              viewAll
             />
           );
         })}
