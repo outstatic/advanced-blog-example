@@ -1,6 +1,6 @@
 {
-  "commit": "f14976a32a2ac6cf9e04f77e03e40cbc7373af88",
-  "generated": "Thu, 28 Dec 2023 02:31:45 GMT",
+  "commit": "408bdd27bc592a1ecdd49f62438446d1ca112352",
+  "generated": "2023-12-28T02:34:20.596Z",
   "metadata": [
     {
       "__outstatic": {
@@ -84,6 +84,24 @@
       "slug": "nothing-wrong",
       "status": "published",
       "title": "Nothing is wrong. Everything is perfect"
+    },
+    {
+      "__outstatic": {
+        "commit": "408bdd27bc592a1ecdd49f62438446d1ca112352",
+        "hash": "1369583139",
+        "path": "outstatic/content/code/new-bun-deploy.md"
+      },
+      "author": {
+        "name": "",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "code",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-28T02:16:04.357Z",
+      "slug": "new-bun-deploy",
+      "status": "draft",
+      "title": "New bun deploy"
     }
   ]
 }
