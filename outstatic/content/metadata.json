@@ -1,6 +1,6 @@
 {
-  "commit": "408bdd27bc592a1ecdd49f62438446d1ca112352",
-  "generated": "2023-12-28T02:34:20.596Z",
+  "commit": "130b09b060b72c22a1a01d226867ab2977addebd",
+  "generated": "2023-12-28T02:43:38.308Z",
   "metadata": [
     {
       "__outstatic": {
@@ -87,8 +87,8 @@
     },
     {
       "__outstatic": {
-        "commit": "408bdd27bc592a1ecdd49f62438446d1ca112352",
-        "hash": "1369583139",
+        "commit": "130b09b060b72c22a1a01d226867ab2977addebd",
+        "hash": "337889427",
         "path": "outstatic/content/code/new-bun-deploy.md"
       },
       "author": {
@@ -100,7 +100,7 @@
       "description": "",
       "publishedAt": "2023-12-28T02:16:04.357Z",
       "slug": "new-bun-deploy",
-      "status": "draft",
+      "status": "published",
       "title": "New bun deploy"
     }
   ]

@@ -1,6 +1,6 @@
 ---
 title: 'New bun deploy'
-status: 'draft'
+status: 'published'
 author:
   name: ''
   picture: 'https://avatars.githubusercontent.com/u/1417109?v=4'
