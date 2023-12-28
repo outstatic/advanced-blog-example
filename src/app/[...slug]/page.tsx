@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { OstDocument } from "outstatic";
-import { load } from "outstatic/server";
+import { getCollections, load } from "outstatic/server";
 
 type Post = {
   tags: { value: string; label: string }[];
@@ -188,7 +188,7 @@ async function getData({ params }: Params) {
 
 export async function generateStaticParams() {
   const db = await load();
-
+  const collections = getCollections();
   // get all posts, except those in the pages and posts collection
   const items = await db
     .find(
@@ -203,6 +203,13 @@ export async function generateStaticParams() {
   const slugs = items.map(({ collection, slug }) => ({
     slug: [collection, slug],
   }));
+
+  collections.forEach((collection) => {
+    if (collection === "posts" || collection === "pages") return;
+    slugs.push({
+      slug: [collection],
+    });
+  });
 
   return slugs;
 }
