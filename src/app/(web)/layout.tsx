@@ -39,7 +39,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="relative pb-32 min-h-screen">
         <Header />
         <div className="max-w-6xl mx-auto px-5 h-full pt-8 md:pt-24">
           {children}

@@ -53,43 +53,41 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
 export default async function Post(params: Params) {
   const post = await getData(params);
   return (
-    <div className="max-w-6xl mx-auto px-5">
-      <article className="mb-32">
-        <div className="relative mb-2 md:mb-4 sm:mx-0 w-full h-52 md:h-96">
-          <Image
-            alt={post.title}
-            src={post?.coverImage || ""}
-            fill
-            className="object-cover object-center"
-            priority
-          />
-        </div>
-        {Array.isArray(post?.tags)
-          ? post.tags.map(({ label }) => (
-              <span
-                key="label"
-                className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-              >
-                {label}
-              </span>
-            ))
-          : null}
-        <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
-          {post.title}
-        </h1>
-        <div className="hidden md:block md:mb-12 text-slate-600">
-          Written on <DateFormatter dateString={post.publishedAt} /> by{" "}
-          {post?.author?.name || ""}.
-        </div>
-        <hr className="border-neutral-200 mt-10 mb-10" />
-        <div className="max-w-2xl mx-auto">
-          <div
-            className="prose lg:prose-xl"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-        </div>
-      </article>
-    </div>
+    <article className="mb-32">
+      <div className="relative mb-2 md:mb-4 sm:mx-0 w-full h-52 md:h-96">
+        <Image
+          alt={post.title}
+          src={post?.coverImage || ""}
+          fill
+          className="object-cover object-center"
+          priority
+        />
+      </div>
+      {Array.isArray(post?.tags)
+        ? post.tags.map(({ label }) => (
+            <span
+              key="label"
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+            >
+              {label}
+            </span>
+          ))
+        : null}
+      <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
+        {post.title}
+      </h1>
+      <div className="hidden md:block md:mb-12 text-slate-600">
+        Written on <DateFormatter dateString={post.publishedAt} /> by{" "}
+        {post?.author?.name || ""}.
+      </div>
+      <hr className="border-neutral-200 mt-10 mb-10" />
+      <div className="max-w-2xl mx-auto">
+        <div
+          className="prose lg:prose-xl"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </div>
+    </article>
   );
 }
 

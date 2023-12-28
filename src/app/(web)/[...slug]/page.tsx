@@ -71,14 +71,12 @@ export default async function Post(params: Params) {
 
   if (post.collection === "pages") {
     return (
-      <div className="max-w-6xl mx-auto">
-        <article className="mb-32">
-          <div
-            className="prose lg:prose-2xl home-intro"
-            dangerouslySetInnerHTML={{ __html: post.content }}
-          />
-        </article>
-      </div>
+      <article className="mb-32">
+        <div
+          className="prose lg:prose-2xl home-intro"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+      </article>
     );
   }
 
