@@ -1,3 +1,5 @@
+import { Button } from "@/components/ui/button";
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import type { OstDocument } from "outstatic";
@@ -22,17 +24,23 @@ const ContentGrid = ({
   viewAll = false,
 }: Props) => {
   return (
-    <section id={collection}>
-      <div className="flex gap-8 items-center">
-        <h2 className="mb-8 text-5xl md:text-6xl font-bold tracking-tighter leading-tight capitalize">
+    <section id={collection} className="mb-24">
+      <div className="flex gap-8 items-end mb-8">
+        <h2 className=" text-5xl md:text-6xl font-bold tracking-tighter leading-tight capitalize">
           {title}
         </h2>
-        {viewAll ? <Link href={`/${collection}`}>View all</Link> : null}
+        {viewAll ? (
+          <Button asChild variant="outline">
+            <Link href={`/${collection}`} className="gap-2">
+              View all <ArrowRight size={16} />
+            </Link>
+          </Button>
+        ) : null}
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-x-6 lg:gap-x-8 gap-y-5 sm:gap-y-6 lg:gap-y-8 mb-8">
         {items.map((item, id) => (
           <Link key={item.slug} href={`/${collection}/${item.slug}`}>
-            <div className="cursor-pointer border rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden">
+            <div className="cursor-pointer border rounded-md md:w-full scale-100 hover:scale-[1.02] active:scale-[0.97] motion-safe:transform-gpu transition duration-100 motion-reduce:hover:scale-100 hover:shadow overflow-hidden h-full">
               <div className="sm:mx-0">
                 <Image
                   src={item.coverImage || `/api/og?title=${item.title}`}

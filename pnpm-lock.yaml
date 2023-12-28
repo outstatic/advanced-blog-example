@@ -1,16 +1,20 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@radix-ui/react-slot': ^1.0.2
   '@tailwindcss/typography': ^0.5.9
   '@types/node': ^20
   '@types/react': ^18
   '@types/react-dom': ^18
   '@vercel/og': ^0.6.1
   autoprefixer: 10.4.14
+  class-variance-authority: ^0.7.0
+  clsx: ^2.0.0
   date-fns: ^2.30.0
   eslint: 8.42.0
   eslint-config-next: ^13.4.0
   gray-matter: ^4.0.3
+  lucide-react: ^0.303.0
   next: ^14.0.0
   outstatic: ^1.0.0
   postcss: 8.4.24
@@ -18,20 +22,28 @@ specifiers:
   react-dom: ^18
   remark: ^14.0.3
   remark-html: ^15.0.2
+  tailwind-merge: ^2.2.0
   tailwindcss: 3.3.2
+  tailwindcss-animate: ^1.0.7
   typescript: 5.1.3
 
 dependencies:
+  '@radix-ui/react-slot': 1.0.2_qinpt5tsrh57s4kh6guy25fqdq
   '@vercel/og': 0.6.1
+  class-variance-authority: 0.7.0
+  clsx: 2.0.0
   date-fns: 2.30.0
   gray-matter: 4.0.3
+  lucide-react: 0.303.0_react@18.2.0
   next: 14.0.4_biqbaboplfbrettd7655fr4n2y
   outstatic: 1.0.5_ufmc75xdvmccjqfvy6v5dp2nmq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   remark: 14.0.3
   remark-html: 15.0.2
+  tailwind-merge: 2.2.0
   tailwindcss: 3.3.2
+  tailwindcss-animate: 1.0.7_tailwindcss@3.3.2
 
 devDependencies:
   '@tailwindcss/typography': 0.5.10_tailwindcss@3.3.2
@@ -664,6 +676,35 @@ packages:
 
   /@popperjs/core/2.11.8:
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
+    dev: false
+
+  /@radix-ui/react-compose-refs/1.0.1_qinpt5tsrh57s4kh6guy25fqdq:
+    resolution: {integrity: sha512-fDSBgd44FKHa1FRMU59qBMPFcl2PZE+2nmqunj+BWFyYYjnhIDWL2ItDs3rrbJDQOtzt5nIebLCQc4QRfz6LJw==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.23.6
+      '@types/react': 18.2.45
+      react: 18.2.0
+    dev: false
+
+  /@radix-ui/react-slot/1.0.2_qinpt5tsrh57s4kh6guy25fqdq:
+    resolution: {integrity: sha512-YeTpuq4deV+6DusvVUW4ivBgnkHwECUu0BiN43L5UCDFgdhsRUWAghhTF5MbvNTPzmiFOx90asDSUjWuCNapwg==}
+    peerDependencies:
+      '@types/react': '*'
+      react: ^16.8 || ^17.0 || ^18.0
+    peerDependenciesMeta:
+      '@types/react':
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.23.6
+      '@radix-ui/react-compose-refs': 1.0.1_qinpt5tsrh57s4kh6guy25fqdq
+      '@types/react': 18.2.45
+      react: 18.2.0
     dev: false
 
   /@remirror/core-constants/2.0.2:
@@ -1709,6 +1750,12 @@ packages:
     optionalDependencies:
       fsevents: 2.3.3
 
+  /class-variance-authority/0.7.0:
+    resolution: {integrity: sha512-jFI8IQw4hczaL4ALINxqLEXQbWcNjoSkloa4IaufXCJr6QawJyw7tuRysRsrE8w2p/4gGaxKIt/hX3qz/IbD1A==}
+    dependencies:
+      clsx: 2.0.0
+    dev: false
+
   /classnames/2.5.0:
     resolution: {integrity: sha512-FQuRlyKinxrb5gwJlfVASbSrDlikDJ07426TrfPsdGLvtochowmkbnSFdQGJ2aoXrSetq5KqGV9emvWpy+91xA==}
     dev: false
@@ -1728,6 +1775,11 @@ packages:
 
   /clsx/1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
     engines: {node: '>=6'}
     dev: false
 
@@ -3400,6 +3452,14 @@ packages:
 
   /lucide-react/0.260.0_react@18.2.0:
     resolution: {integrity: sha512-xN6wuhUlcXeS4GsxZpd2DZp+m1jEZPckuCr90nQAXKRNl63GZ4KshIcGmqJEUqEygmv8Rf99MhcwF3DqBqQ9Dg==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 18.2.0
+    dev: false
+
+  /lucide-react/0.303.0_react@18.2.0:
+    resolution: {integrity: sha512-B0B9T3dLEFBYPCUlnUS1mvAhW1craSbF9HO+JfBjAtpFUJ7gMIqmEwNSclikY3RiN2OnCkj/V1ReAQpaHae8Bg==}
     peerDependencies:
       react: ^16.5.1 || ^17.0.0 || ^18.0.0
     dependencies:
@@ -5090,6 +5150,20 @@ packages:
 
   /tailwind-merge/1.14.0:
     resolution: {integrity: sha512-3mFKyCo/MBcgyOTlrY8T7odzZFx+w+qKSMAmdFzRvqBfLlSigU6TZnlFHK0lkMwj9Bj8OYU+9yW9lmGuS0QEnQ==}
+    dev: false
+
+  /tailwind-merge/2.2.0:
+    resolution: {integrity: sha512-SqqhhaL0T06SW59+JVNfAqKdqLs0497esifRrZ7jOaefP3o64fdFNDMrAQWZFMxTLJPiHVjRLUywT8uFz1xNWQ==}
+    dependencies:
+      '@babel/runtime': 7.23.6
+    dev: false
+
+  /tailwindcss-animate/1.0.7_tailwindcss@3.3.2:
+    resolution: {integrity: sha512-bl6mpH3T7I3UFxuvDEXLxy/VuFxBk5bbzplh7tXI68mwMokNYd1t9qPBHlnyTwfa4JGC4zP516I1hYYtQ/vspA==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || insiders'
+    dependencies:
+      tailwindcss: 3.3.2
     dev: false
 
   /tailwindcss/3.3.2:
