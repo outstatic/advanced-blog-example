@@ -2,7 +2,13 @@ import { ImageResponse } from "@vercel/og";
 
 export const runtime = "edge";
 
+const font = fetch(
+  new URL("../../../../fonts/Inter-SemiBold.ttf", import.meta.url)
+).then((res) => res.arrayBuffer());
+
 export async function GET(request: Request) {
+  const fontData = await font;
+
   try {
     const { searchParams } = new URL(request.url);
 
@@ -20,11 +26,11 @@ export async function GET(request: Request) {
             width: "100%",
             display: "flex",
             textAlign: "center",
-            alignItems: "center",
+            alignItems: "flex-start",
             justifyContent: "center",
             flexDirection: "column",
             flexWrap: "nowrap",
-            padding: "0 100px",
+            position: "relative",
           }}
         >
           <div
@@ -38,6 +44,8 @@ export async function GET(request: Request) {
               flexDirection: "column",
               flexWrap: "nowrap",
               position: "absolute",
+              top: 0,
+              left: 0,
             }}
           >
             <svg
@@ -164,14 +172,30 @@ export async function GET(request: Request) {
               </g>
             </svg>
           </div>
-          <h2 tw="flex flex-col text-[120px] font-black tracking-tight text-gray-900 text-left">
-            {title}
-          </h2>
+          <div tw="flex flex-col pl-24">
+            <h2
+              style={{
+                fontWeight: "bold",
+                fontSize: "90px",
+                textAlign: "left",
+                fontFamily: '"Inter"',
+              }}
+            >
+              {title}
+            </h2>
+          </div>
         </div>
       ),
       {
         width: 1200,
         height: 630,
+        fonts: [
+          {
+            name: "Inter",
+            data: fontData,
+            style: "normal",
+          },
+        ],
       }
     );
   } catch (e: any) {
