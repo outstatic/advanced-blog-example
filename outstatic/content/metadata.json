@@ -1,40 +1,24 @@
 {
-  "commit": "27550f7865466a55b819a4f247f216accad15c3b",
-  "generated": "Thu, 21 Dec 2023 02:09:22 GMT",
+  "commit": "f14976a32a2ac6cf9e04f77e03e40cbc7373af88",
+  "generated": "Thu, 28 Dec 2023 02:31:45 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "998b7f74af83e46bbdb4ab5302c8e4c39963278f",
-        "hash": "3707858083",
-        "path": "outstatic/content/posts/the-wrong-decision.md"
+        "commit": "2e47122b5b6d49d6d1ddb15bcd33edc4a0c1256e",
+        "hash": "217348983",
+        "path": "outstatic/content/pages/home.md"
       },
       "author": {
-        "name": "Naval Ravikant"
+        "name": "Andre Vitorio",
+        "picture": ""
       },
-      "collection": "posts",
-      "coverImage": "/images/skyline.png",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
-      "publishedAt": "2022-03-26T05:35:07.322Z",
-      "slug": "the-wrong-decision",
+      "collection": "pages",
+      "coverImage": "",
+      "description": "This is my blog.",
+      "publishedAt": "2022-03-17T05:35:07.322Z",
+      "slug": "home",
       "status": "published",
-      "title": "If you want to make the wrong decision, ask everyone"
-    },
-    {
-      "__outstatic": {
-        "commit": "d2f316fd04def3347c906f5227da5daf79971f61",
-        "hash": "4086614036",
-        "path": "outstatic/content/posts/nothing-wrong.md"
-      },
-      "author": {
-        "name": "Andre Vitorio"
-      },
-      "collection": "posts",
-      "coverImage": "/images/industrial-pattern.png",
-      "description": "One more day, one more joy. I feel blessed.",
-      "publishedAt": "2022-09-14T17:55:40.452Z",
-      "slug": "nothing-wrong",
-      "status": "published",
-      "title": "Nothing is wrong. Everything is perfect"
+      "title": "Home"
     },
     {
       "__outstatic": {
@@ -69,21 +53,37 @@
     },
     {
       "__outstatic": {
-        "commit": "2e47122b5b6d49d6d1ddb15bcd33edc4a0c1256e",
-        "hash": "217348983",
-        "path": "outstatic/content/pages/home.md"
+        "commit": "998b7f74af83e46bbdb4ab5302c8e4c39963278f",
+        "hash": "3707858083",
+        "path": "outstatic/content/posts/the-wrong-decision.md"
       },
       "author": {
-        "name": "Andre Vitorio",
-        "picture": ""
+        "name": "Naval Ravikant"
       },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "This is my blog.",
-      "publishedAt": "2022-03-17T05:35:07.322Z",
-      "slug": "home",
+      "collection": "posts",
+      "coverImage": "/images/skyline.png",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.",
+      "publishedAt": "2022-03-26T05:35:07.322Z",
+      "slug": "the-wrong-decision",
       "status": "published",
-      "title": "Home"
+      "title": "If you want to make the wrong decision, ask everyone"
+    },
+    {
+      "__outstatic": {
+        "commit": "d2f316fd04def3347c906f5227da5daf79971f61",
+        "hash": "4086614036",
+        "path": "outstatic/content/posts/nothing-wrong.md"
+      },
+      "author": {
+        "name": "Andre Vitorio"
+      },
+      "collection": "posts",
+      "coverImage": "/images/industrial-pattern.png",
+      "description": "One more day, one more joy. I feel blessed.",
+      "publishedAt": "2022-09-14T17:55:40.452Z",
+      "slug": "nothing-wrong",
+      "status": "published",
+      "title": "Nothing is wrong. Everything is perfect"
     }
   ]
 }
