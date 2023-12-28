@@ -205,7 +205,7 @@ export async function generateStaticParams() {
   }));
 
   collections.forEach((collection) => {
-    if (collection === "posts" || collection === "pages") return;
+    if (collection === "pages") return;
     slugs.push({
       slug: [collection],
     });
