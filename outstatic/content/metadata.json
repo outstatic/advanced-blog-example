@@ -1,6 +1,6 @@
 {
-  "commit": "130b09b060b72c22a1a01d226867ab2977addebd",
-  "generated": "2023-12-28T02:43:38.308Z",
+  "commit": "a77b2f82cfc0075987277c9f828cba236c0a5558",
+  "generated": "2023-12-28T04:34:07.071Z",
   "metadata": [
     {
       "__outstatic": {
@@ -102,6 +102,24 @@
       "slug": "new-bun-deploy",
       "status": "published",
       "title": "New bun deploy"
+    },
+    {
+      "__outstatic": {
+        "commit": "a77b2f82cfc0075987277c9f828cba236c0a5558",
+        "hash": "3835568269",
+        "path": "outstatic/content/code/navbar-in-mdx.md"
+      },
+      "author": {
+        "name": "Andre",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "code",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-28T04:15:45.215Z",
+      "slug": "navbar-in-mdx",
+      "status": "published",
+      "title": "Navbar in mdx"
     }
   ]
 }
