@@ -1,43 +1,40 @@
+import ContentGrid from "@/components/ContentGrid";
+import markdownToHtml from "@/lib/markdownToHtml";
 import { load } from "outstatic/server";
-import ContentGrid from "../components/ContentGrid";
-import Layout from "../components/Layout";
-import markdownToHtml from "../lib/markdownToHtml";
 
 export default async function Index() {
   const { content, allPosts, otherCollections } = await getData();
 
   return (
-    <Layout>
-      <div className="max-w-6xl mx-auto px-5">
-        <section className="mt-16 mb-16 md:mb-12">
-          <div
-            className="prose lg:prose-2xl home-intro"
-            dangerouslySetInnerHTML={{ __html: content }}
-          />
-        </section>
-        {allPosts.length > 0 && (
+    <>
+      <section className="mb-16 md:mb-12">
+        <div
+          className="prose lg:prose-2xl home-intro"
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      </section>
+      {allPosts.length > 0 && (
+        <ContentGrid
+          title="Posts"
+          items={allPosts}
+          collection="posts"
+          priority
+          viewAll
+        />
+      )}
+      {Object.keys(otherCollections).map((collection) => {
+        if (!collection.length) return null;
+        return (
           <ContentGrid
-            title="Posts"
-            items={allPosts}
-            collection="posts"
-            priority
+            key={collection}
+            title={collection}
+            items={otherCollections[collection]}
+            collection={collection}
             viewAll
           />
-        )}
-        {Object.keys(otherCollections).map((collection) => {
-          if (!collection.length) return null;
-          return (
-            <ContentGrid
-              key={collection}
-              title={collection}
-              items={otherCollections[collection]}
-              collection={collection}
-              viewAll
-            />
-          );
-        })}
-      </div>
-    </Layout>
+        );
+      })}
+    </>
   );
 }
 
