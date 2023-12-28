@@ -1,6 +1,6 @@
 {
-  "commit": "dde38afe871193e147b2adaffdaa31be3d279248",
-  "generated": "2023-12-28T06:45:51.768Z",
+  "commit": "f924fe1db572499ed1a09d5dded6279b1c29c0ad",
+  "generated": "2023-12-28T19:07:42.068Z",
   "metadata": [
     {
       "__outstatic": {
@@ -138,6 +138,24 @@
       "slug": "pacy-premium-design",
       "status": "published",
       "title": "Pacy - Premium Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "f924fe1db572499ed1a09d5dded6279b1c29c0ad",
+        "hash": "2126994038",
+        "path": "outstatic/content/pages/about.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-28T18:49:02.348Z",
+      "slug": "about",
+      "status": "published",
+      "title": "About Me"
     }
   ]
 }
