@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from "next/link";
 
 const Header = () => {
   return (
@@ -10,18 +10,18 @@ const Header = () => {
           </Link>
         </li>
         <li>
-          <Link href="/#posts" className="hover:underline">
+          <Link href="/posts" className="hover:underline">
             Posts
           </Link>
         </li>
         <li>
-          <Link href="/#projects" className="hover:underline">
+          <Link href="/projects" className="hover:underline">
             Projects
           </Link>
         </li>
       </ul>
     </nav>
-  )
-}
+  );
+};
 
-export default Header
+export default Header;
