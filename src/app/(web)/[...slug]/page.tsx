@@ -73,7 +73,7 @@ export default async function Post(params: Params) {
     return (
       <article className="mb-32">
         <div
-          className="prose lg:prose-2xl home-intro"
+          className="prose lg:prose-2xl prose-outstatic"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </article>
@@ -112,7 +112,7 @@ export default async function Post(params: Params) {
         <hr className="border-neutral-200 mt-10 mb-10" />
         <div className="max-w-2xl mx-auto">
           <div
-            className="prose lg:prose-xl"
+            className="prose lg:prose-xl prose-outstatic"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
         </div>

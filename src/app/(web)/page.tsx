@@ -9,7 +9,7 @@ export default async function Index() {
     <>
       <section className="mb-16 md:mb-12">
         <div
-          className="prose lg:prose-2xl home-intro"
+          className="prose lg:prose-2xl home-intro prose-outstatic"
           dangerouslySetInnerHTML={{ __html: content }}
         />
       </section>
