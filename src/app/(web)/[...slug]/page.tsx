@@ -194,11 +194,13 @@ async function getData({ params }: Params) {
 export async function generateStaticParams() {
   const db = await load();
   const collections = getCollections();
-  // get all posts, except those in the pages and posts collection
+
+  // get all documents, except those in the posts collection and the home page
+  // as we have a specific route for them (/posts)
   const items = await db
     .find(
       {
-        $nor: [{ collection: "posts" }, { collection: "pages" }],
+        $nor: [{ collection: "posts" }, { collection: "pages", slug: "home" }],
         status: "published",
       },
       ["collection", "slug"]
@@ -210,7 +212,6 @@ export async function generateStaticParams() {
   }));
 
   collections.forEach((collection) => {
-    if (collection === "pages") return;
     slugs.push({
       slug: [collection],
     });
