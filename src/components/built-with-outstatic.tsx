@@ -1,8 +1,10 @@
-export const BuiltWithOutstatic = () => (
+export const BuiltWithOutstatic = ({ fixed = true }: { fixed: boolean }) => (
   <a
     href="https://outstatic.com"
     target="_blank"
-    className="group fixed right-2 bottom-2 text-[#1e293b] bg-white flex items-center justify-center border rounded-md p-2 text-sm cursor-poiner h-8 hover:shadow-sm w-[108px] hover:w-[168px] transition duration-300 ease-in-out"
+    className={`group text-[#1e293b] bg-white flex items-center justify-center border rounded-md p-2 text-sm cursor-poiner h-8 hover:shadow-sm w-[108px] hover:w-[168px] transition duration-300 ease-in-out ${
+      fixed ? "fixed right-2 bottom-2 " : "relative"
+    }`}
   >
     <div className="absolute group-hover:relative left-0 transform translate-x-1/4 group-hover:translate-x-0 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out">
       Built with{" "}
