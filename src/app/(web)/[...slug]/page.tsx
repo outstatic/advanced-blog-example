@@ -8,7 +8,7 @@ import { notFound } from "next/navigation";
 import { OstDocument } from "outstatic";
 import { getCollections, load } from "outstatic/server";
 
-type Post = {
+type Document = {
   tags: { value: string; label: string }[];
 } & OstDocument;
 
@@ -19,42 +19,42 @@ interface Params {
 }
 
 export async function generateMetadata(params: Params): Promise<Metadata> {
-  const { post } = await getData(params);
+  const { doc } = await getData(params);
 
-  if (!post) {
+  if (!doc) {
     return {};
   }
 
   return {
-    title: post.title,
-    description: post.description,
+    title: doc.title,
+    description: doc.description,
     openGraph: {
-      title: post.title,
-      description: post.description,
+      title: doc.title,
+      description: doc.description,
       type: "article",
-      url: absoluteUrl(`/${post.collection}/${post.slug}`),
+      url: absoluteUrl(`/${doc.collection}/${doc.slug}`),
       images: [
         {
-          url: absoluteUrl(post?.coverImage || `/api/og?title=${post.title}`),
+          url: absoluteUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
           width: 1200,
           height: 630,
-          alt: post.title,
+          alt: doc.title,
         },
       ],
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
-      description: post.description,
-      images: absoluteUrl(post?.coverImage || `/api/og?title=${post.title}`),
+      title: doc.title,
+      description: doc.description,
+      images: absoluteUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
     },
   };
 }
 
-export default async function Post(params: Params) {
-  const { post, moreDocs } = await getData(params);
+export default async function Document(params: Params) {
+  const { doc, moreDocs } = await getData(params);
 
-  if (!post) {
+  if (!doc) {
     const { docs, collection } = moreDocs;
     return (
       <div className="mb-16">
@@ -69,12 +69,12 @@ export default async function Post(params: Params) {
     );
   }
 
-  if (post.collection === "pages") {
+  if (doc.collection === "pages") {
     return (
       <article className="mb-32">
         <div
           className="prose lg:prose-2xl prose-outstatic"
-          dangerouslySetInnerHTML={{ __html: post.content }}
+          dangerouslySetInnerHTML={{ __html: doc.content }}
         />
       </article>
     );
@@ -85,15 +85,15 @@ export default async function Post(params: Params) {
       <article className="mb-32">
         <div className="relative mb-2 md:mb-4 sm:mx-0 w-full h-52 md:h-96">
           <Image
-            alt={post.title}
-            src={post.coverImage || `/api/og?title=${post.title}`}
+            alt={doc.title}
+            src={doc.coverImage || `/api/og?title=${doc.title}`}
             fill
             className="object-cover object-center"
             priority
           />
         </div>
-        {Array.isArray(post?.tags)
-          ? post.tags.map(({ label }) => (
+        {Array.isArray(doc?.tags)
+          ? doc.tags.map(({ label }) => (
               <span
                 key="label"
                 className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -103,26 +103,26 @@ export default async function Post(params: Params) {
             ))
           : null}
         <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
-          {post.title}
+          {doc.title}
         </h1>
         <div className="hidden md:block md:mb-12 text-slate-600">
-          Written on <DateFormatter dateString={post.publishedAt} /> by{" "}
-          {post?.author?.name || ""}.
+          Written on <DateFormatter dateString={doc.publishedAt} /> by{" "}
+          {doc?.author?.name || ""}.
         </div>
         <hr className="border-neutral-200 mt-10 mb-10" />
         <div className="max-w-2xl mx-auto">
           <div
             className="prose lg:prose-xl prose-outstatic"
-            dangerouslySetInnerHTML={{ __html: post.content }}
+            dangerouslySetInnerHTML={{ __html: doc.content }}
           />
         </div>
       </article>
       <div className="mb-16">
         {moreDocs.length > 0 && (
           <ContentGrid
-            title={`More ${post.collection}`}
+            title={`More ${doc.collection}`}
             items={moreDocs}
-            collection={post.collection}
+            collection={doc.collection}
           />
         )}
       </div>
@@ -135,26 +135,32 @@ async function getData({ params }: Params) {
   let slug = params.slug[1];
   let collection = params.slug[0];
 
+  // check if we have two slugs, if not, we are on a collection archive or a page
   if (!params.slug || params.slug.length !== 2) {
-    const docs = await db
-      .find({ collection }, ["title", "slug", "coverImage", "description"])
-      .toArray();
+    if (collection !== "pages") {
+      const docs = await db
+        .find({ collection }, ["title", "slug", "coverImage", "description"])
+        .toArray();
 
-    if (docs.length) {
-      return {
-        moreDocs: {
-          docs,
-          collection,
-        },
-      };
+      // if we have docs, we are on a collection archive
+      if (docs.length) {
+        return {
+          moreDocs: {
+            docs,
+            collection,
+          },
+        };
+      }
     }
 
+    // if we don't have docs, we are on a page
     slug = params.slug[0];
     collection = "pages";
   }
 
-  const post = await db
-    .find<Post>({ collection, slug }, [
+  // get the document
+  const doc = await db
+    .find<Document>({ collection, slug }, [
       "collection",
       "title",
       "publishedAt",
@@ -167,24 +173,27 @@ async function getData({ params }: Params) {
     ])
     .first();
 
-  if (!post) {
+  if (!doc) {
     notFound();
   }
 
-  const content = await markdownToHtml(post.content);
+  const content = await markdownToHtml(doc.content);
 
-  const moreDocs = await db
-    .find({ collection: params.slug[0], slug: { $ne: params.slug[1] } }, [
-      "title",
-      "slug",
-      "coverImage",
-      "description",
-    ])
-    .toArray();
+  const moreDocs =
+    collection === "pages"
+      ? []
+      : await db
+          .find({ collection: params.slug[0], slug: { $ne: params.slug[1] } }, [
+            "title",
+            "slug",
+            "coverImage",
+            "description",
+          ])
+          .toArray();
 
   return {
-    post: {
-      ...post,
+    doc: {
+      ...doc,
       content,
     },
     moreDocs,
@@ -193,7 +202,9 @@ async function getData({ params }: Params) {
 
 export async function generateStaticParams() {
   const db = await load();
-  const collections = getCollections();
+  const collections = getCollections().filter(
+    (collection) => collection !== "pages"
+  );
 
   // get all documents, except those in the posts collection and the home page
   // as we have a specific route for them (/posts)
@@ -207,8 +218,9 @@ export async function generateStaticParams() {
     )
     .toArray();
 
+  // pages should be at the root level
   const slugs = items.map(({ collection, slug }) => ({
-    slug: [collection, slug],
+    slug: collection === "pages" ? [slug] : [collection, slug],
   }));
 
   collections.forEach((collection) => {
