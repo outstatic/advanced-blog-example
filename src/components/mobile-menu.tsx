@@ -1,0 +1,64 @@
+"use client";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerFooter,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Menu, XIcon } from "lucide-react";
+import Link from "next/link";
+import { useState } from "react";
+import { MenuProps } from "./header";
+import { Button, buttonVariants } from "./ui/button";
+
+export const MobileMenu = ({ pages, collections }: MenuProps) => {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <div className="block md:hidden">
+      <Drawer open={open} onOpenChange={setOpen}>
+        <DrawerTrigger>
+          <div className="p-2">
+            <Menu />
+          </div>
+        </DrawerTrigger>
+        <DrawerContent>
+          <ul className="flex flex-col gap-2 pt-2">
+            {pages.map(({ title, slug }) => (
+              <li key={slug}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  className={buttonVariants() + " capitalize w-full"}
+                  href={`/${slug}`}
+                >
+                  {title}
+                </Link>
+              </li>
+            ))}
+            {collections.map((collection) => (
+              <li key={collection}>
+                <Link
+                  onClick={() => setOpen(false)}
+                  className={buttonVariants() + " capitalize w-full"}
+                  href={`/${collection}`}
+                >
+                  {collection}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <DrawerFooter>
+            <div className="w-full justify-end flex">
+              <DrawerClose>
+                <Button variant="outline">
+                  <XIcon />
+                </Button>
+              </DrawerClose>
+            </div>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </div>
+  );
+};
