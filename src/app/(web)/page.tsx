@@ -1,4 +1,4 @@
-import ContentGrid from "@/components/ContentGrid";
+import ContentGrid from "@/components/content-grid";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { load } from "outstatic/server";
 

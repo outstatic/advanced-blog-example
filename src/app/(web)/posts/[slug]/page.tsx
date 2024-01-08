@@ -1,4 +1,4 @@
-import DateFormatter from "@/components/DateFormatter";
+import DateFormatter from "@/components/date-formatter";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";

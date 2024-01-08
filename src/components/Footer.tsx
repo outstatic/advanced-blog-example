@@ -1,6 +1,6 @@
 import { GithubIcon, LinkedinIcon } from "lucide-react";
 import Link from "next/link";
-import { BuiltWithOutstatic } from "./BuiltWithOutstatic";
+import { BuiltWithOutstatic } from "./built-with-outstatic";
 
 const Footer = () => {
   return (
