@@ -7,7 +7,7 @@ export default async function Index() {
 
   return (
     <>
-      <section className="mb-16 md:mb-44 md:mt-36">
+      <section className="mb-16 md:min-h-[calc(100vh-256px)] items-center flex">
         <div
           className="prose lg:prose-2xl home-intro prose-outstatic"
           dangerouslySetInnerHTML={{ __html: content }}
