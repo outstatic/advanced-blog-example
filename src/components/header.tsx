@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getCollections, load } from "outstatic/server";
 import { MobileMenu } from "./mobile-menu";
+import { ThemeToggle } from "./theme-toggle";
 import { buttonVariants } from "./ui/button";
 
 export type MenuProps = {
@@ -16,8 +17,8 @@ const Header = async () => {
   const { pages, collections } = data;
 
   return (
-    <nav className="py-4 fixed bottom-0 border-t md:bottom-auto md:top-0 w-full bg-white z-20 border-b">
-      <div className="max-w-6xl mx-auto px-5 w-full layout flex items-center justify-between">
+    <header className="py-4 fixed bottom-0 border-t md:bottom-auto md:top-0 w-full z-20 border-b bg-background">
+      <nav className="max-w-6xl mx-auto px-5 w-full layout flex items-center justify-between">
         <Link
           href="/"
           className="hover:text-gray-700 underline-offset-2 font-semibold transition-all hover:scale-105"
@@ -51,10 +52,11 @@ const Header = async () => {
               </Link>
             </li>
           ))}
+          <ThemeToggle />
         </ul>
         <MobileMenu pages={pages} collections={collections} />
-      </div>
-    </nav>
+      </nav>
+    </header>
   );
 };
 

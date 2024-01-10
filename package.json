@@ -17,6 +17,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.303.0",
     "next": "^14.0.0",
+    "next-themes": "^0.2.1",
     "outstatic": "^1.0.0",
     "react": "^18",
     "react-dom": "^18",

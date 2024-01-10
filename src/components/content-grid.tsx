@@ -77,7 +77,7 @@ const ContentGrid = ({
       </div>
 
       {viewAll ? (
-        <Button asChild className="md:hidden w-full mt-4">
+        <Button asChild variant="secondary" className="md:hidden w-full mt-4">
           <Link href={`/${collection}`} className="gap-2">
             View all {title}
             <ArrowRight size={16} />

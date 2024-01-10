@@ -17,6 +17,7 @@ specifiers:
   gray-matter: ^4.0.3
   lucide-react: ^0.303.0
   next: ^14.0.0
+  next-themes: ^0.2.1
   outstatic: ^1.0.0
   postcss: 8.4.24
   react: ^18
@@ -39,6 +40,7 @@ dependencies:
   gray-matter: 4.0.3
   lucide-react: 0.303.0_react@18.2.0
   next: 14.0.4_biqbaboplfbrettd7655fr4n2y
+  next-themes: 0.2.1_hhw7wgihwfazgzbvi55hs2pcf4
   outstatic: 1.0.5_ufmc75xdvmccjqfvy6v5dp2nmq
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -4141,6 +4143,18 @@ packages:
     dependencies:
       cookie: 0.4.2
       nanoid: 3.3.7
+    dev: false
+
+  /next-themes/0.2.1_hhw7wgihwfazgzbvi55hs2pcf4:
+    resolution: {integrity: sha512-B+AKNfYNIzh0vqQQKqQItTS8evEouKD7H5Hj3kmuPERwddR2TxvDSFZuTj6T7Jfn1oyeUyJMydPl1Bkxkh0W7A==}
+    peerDependencies:
+      next: '*'
+      react: '*'
+      react-dom: '*'
+    dependencies:
+      next: 14.0.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /next/14.0.4_biqbaboplfbrettd7655fr4n2y:

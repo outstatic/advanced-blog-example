@@ -76,5 +76,5 @@
 }
 
 .home-intro p {
-  @apply text-2xl font-semibold leading-9;
+  @apply text-3xl md:text-5xl font-thin leading-tight;
 }
