@@ -76,5 +76,13 @@
 }
 
 .home-intro p {
-  @apply text-3xl md:text-5xl font-thin leading-tight;
+  @apply text-3xl md:text-5xl font-thin md:leading-tight;
+
+  a {
+    @apply before:-z-10 relative before:bg-secondary font-normal no-underline transition-all inline-block before:content-normal before:absolute before:w-0 before:transition-all before:duration-300 before:h-full before:-left-1 before:top-1;
+  }
+
+  a:hover {
+    @apply before:w-[calc(100%+0.5rem)];
+  }
 }
