@@ -16,11 +16,11 @@ const Header = async () => {
   const { pages, collections } = data;
 
   return (
-    <nav className="py-4 fixed bottom-0 border-t md:bottom-auto md:top-0 w-full bg-white z-10 border-b">
+    <nav className="py-4 fixed bottom-0 border-t md:bottom-auto md:top-0 w-full bg-white z-20 border-b">
       <div className="max-w-6xl mx-auto px-5 w-full layout flex items-center justify-between">
         <Link
           href="/"
-          className="hover:underline underline-offset-2 font-semibold"
+          className="hover:text-gray-700 underline-offset-2 font-semibold transition-all hover:scale-105"
         >
           Andre Vitorio
         </Link>
