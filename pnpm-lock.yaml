@@ -20,6 +20,8 @@ specifiers:
   next-themes: ^0.2.1
   outstatic: ^1.0.0
   postcss: 8.4.24
+  postcss-import: ^16.0.0
+  postcss-nesting: ^12.0.2
   react: ^18
   react-dom: ^18
   remark: ^14.0.3
@@ -60,6 +62,8 @@ devDependencies:
   eslint: 8.42.0
   eslint-config-next: 13.5.6_tizxnkcvjrb4cldxgwq5h3lj5u
   postcss: 8.4.24
+  postcss-import: 16.0.0_postcss@8.4.24
+  postcss-nesting: 12.0.2_postcss@8.4.24
   typescript: 5.1.3
 
 packages:
@@ -312,6 +316,15 @@ packages:
       '@babel/helper-validator-identifier': 7.22.20
       to-fast-properties: 2.0.0
     dev: false
+
+  /@csstools/selector-specificity/3.0.1_6hstxmgy5ko3bcmq3u35s2yrwy:
+    resolution: {integrity: sha512-NPljRHkq4a14YzZ3YD406uaxh7s0g6eAq3L9aLOWywoqe8PkYamAvtsh7KNX6c++ihDrJ0RiU+/z7rGnhlZ5ww==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss-selector-parser: ^6.0.13
+    dependencies:
+      postcss-selector-parser: 6.0.14
+    dev: true
 
   /@emotion/babel-plugin/11.11.0:
     resolution: {integrity: sha512-m4HEDZleaaCH+XgDDsPF15Ht6wTLsgDTeR3WYj9Q/k76JtWhrJjcP4+/XlG8LGT/Rol9qUfOIztXeA84ATpqPQ==}
@@ -4571,6 +4584,18 @@ packages:
       read-cache: 1.0.0
       resolve: 1.22.8
 
+  /postcss-import/16.0.0_postcss@8.4.24:
+    resolution: {integrity: sha512-e77lhVvrD1I2y7dYmBv0k9ULTdArgEYZt97T4w6sFIU5uxIHvDFQlKgUUyY7v7Barj0Yf/zm5A4OquZN7jKm5Q==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+    dependencies:
+      postcss: 8.4.24
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.8
+    dev: true
+
   /postcss-js/4.0.1_postcss@8.4.31:
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -4604,6 +4629,17 @@ packages:
     dependencies:
       postcss: 8.4.31
       postcss-selector-parser: 6.0.14
+
+  /postcss-nesting/12.0.2_postcss@8.4.24:
+    resolution: {integrity: sha512-63PpJHSeNs93S3ZUIyi+7kKx4JqOIEJ6QYtG3x+0qA4J03+4n0iwsyA1GAHyWxsHYljQS4/4ZK1o2sMi70b5wQ==}
+    engines: {node: ^14 || ^16 || >=18}
+    peerDependencies:
+      postcss: ^8.4
+    dependencies:
+      '@csstools/selector-specificity': 3.0.1_6hstxmgy5ko3bcmq3u35s2yrwy
+      postcss: 8.4.24
+      postcss-selector-parser: 6.0.14
+    dev: true
 
   /postcss-selector-parser/6.0.10:
     resolution: {integrity: sha512-IQ7TZdoaqbT+LCpShg46jnZVlhWD2w6iQYAcYXfHARZ7X1t/UGhhceQDs5X0cGqKvYlHNOuv7Oa1xmb0oQuA3w==}
