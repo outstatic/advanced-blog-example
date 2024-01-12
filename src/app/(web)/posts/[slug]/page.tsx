@@ -56,7 +56,7 @@ export default async function Post(params: Params) {
       <DocHero {...post} />
       <div className="max-w-2xl mx-auto">
         <div
-          className="prose lg:prose-xl prose-outstatic"
+          className="prose prose-outstatic"
           dangerouslySetInnerHTML={{ __html: post.content }}
         />
       </div>
