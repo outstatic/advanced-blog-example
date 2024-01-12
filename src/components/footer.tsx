@@ -7,8 +7,18 @@ const Footer = () => {
     <div className="absolute bottom-0 w-full bg-foreground dark:bg-background text-gray-400 py-2 pb-20 md:pb-10 md:py-10">
       <footer className="max-w-6xl container mx-auto flex flex-col-reverse md:flex-row items-start justify-between py-4 px-6">
         <div className="flex justify-between w-full items-center">
-          <div className="flex flex-col md:flex-row items-center">
+          <div className="flex flex-col">
             <p className="text-sm mt-4 md:mt-0">
+              The code for this website is{" "}
+              <Link
+                className="underline underline-offset-2"
+                href="https://github.com/avitorio/andrevitorio-com"
+              >
+                open source
+              </Link>
+              .
+            </p>
+            <p className="text-sm mt-4">
               © Andre Vitorio {new Date().getFullYear()}
             </p>
           </div>
