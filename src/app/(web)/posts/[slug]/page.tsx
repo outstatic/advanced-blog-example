@@ -1,8 +1,7 @@
-import DateFormatter from "@/components/date-formatter";
+import DocHero from "@/components/doc-hero";
 import markdownToHtml from "@/lib/markdownToHtml";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { OstDocument } from "outstatic";
 import { getDocumentSlugs, load } from "outstatic/server";
@@ -54,33 +53,7 @@ export default async function Post(params: Params) {
   const post = await getData(params);
   return (
     <article className="mb-32">
-      <div className="relative mb-2 md:mb-4 sm:mx-0 w-full h-52 md:h-96">
-        <Image
-          alt={post.title}
-          src={post?.coverImage || ""}
-          fill
-          className="object-cover object-center"
-          priority
-        />
-      </div>
-      {Array.isArray(post?.tags)
-        ? post.tags.map(({ label }) => (
-            <span
-              key="label"
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
-            >
-              {label}
-            </span>
-          ))
-        : null}
-      <h1 className="font-primary text-2xl font-bold md:text-4xl mb-2">
-        {post.title}
-      </h1>
-      <div className="hidden md:block md:mb-12 text-slate-600">
-        Written on <DateFormatter dateString={post.publishedAt} /> by{" "}
-        {post?.author?.name || ""}.
-      </div>
-      <hr className="border-neutral-200 mt-10 mb-10" />
+      <DocHero {...post} />
       <div className="max-w-2xl mx-auto">
         <div
           className="prose lg:prose-xl prose-outstatic"
