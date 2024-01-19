@@ -1,6 +1,6 @@
 {
-  "commit": "217eec1579c1aa72999679b06a8a88cf54c1dcbc",
-  "generated": "2024-01-19T19:24:54.861Z",
+  "commit": "cacf7fbaeefd75731dd727e56154346cac0f8e50",
+  "generated": "2024-01-19T19:44:33.584Z",
   "metadata": [
     {
       "__outstatic": {
@@ -124,24 +124,6 @@
     },
     {
       "__outstatic": {
-        "commit": "f924fe1db572499ed1a09d5dded6279b1c29c0ad",
-        "hash": "2126994038",
-        "path": "outstatic/content/pages/about.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-28T18:49:02.348Z",
-      "slug": "about",
-      "status": "published",
-      "title": "About Me"
-    },
-    {
-      "__outstatic": {
         "commit": "217eec1579c1aa72999679b06a8a88cf54c1dcbc",
         "hash": "2721406306",
         "path": "outstatic/content/posts/add-a-free-cms-to-your-nextjs-website-with-outstatic.md"
@@ -167,6 +149,24 @@
         }
       ],
       "title": "Add a free CMS to your Next.js website with Outstatic"
+    },
+    {
+      "__outstatic": {
+        "commit": "cacf7fbaeefd75731dd727e56154346cac0f8e50",
+        "hash": "1685035471",
+        "path": "outstatic/content/pages/about.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2023-12-28T18:49:02.348Z",
+      "slug": "about",
+      "status": "published",
+      "title": "About Me"
     }
   ]
 }
