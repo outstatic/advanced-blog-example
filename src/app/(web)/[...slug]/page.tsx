@@ -1,6 +1,7 @@
 import ContentGrid from "@/components/content-grid";
 import DocHero from "@/components/doc-hero";
-import markdownToHtml from "@/lib/markdownToHtml";
+import MDXComponent from "@/components/mdx/mdx-component";
+import MDXServer from "@/lib/mdx-server";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -71,10 +72,9 @@ export default async function Document(params: Params) {
   if (doc.collection === "pages") {
     return (
       <article className="mb-32">
-        <div
-          className="prose lg:prose-2xl prose-outstatic"
-          dangerouslySetInnerHTML={{ __html: doc.content }}
-        />
+        <div className="prose lg:prose-2xl prose-outstatic">
+          <MDXComponent content={doc.content} />
+        </div>
       </article>
     );
   }
@@ -84,10 +84,9 @@ export default async function Document(params: Params) {
       <article className="mb-32">
         <DocHero {...doc} />
         <div className="max-w-2xl mx-auto">
-          <div
-            className="prose prose-outstatic"
-            dangerouslySetInnerHTML={{ __html: doc.content }}
-          />
+          <div className="prose prose-outstatic">
+            <MDXComponent content={doc.content} />
+          </div>
         </div>
       </article>
       <div className="mb-16">
@@ -150,7 +149,7 @@ async function getData({ params }: Params) {
     notFound();
   }
 
-  const content = await markdownToHtml(doc.content);
+  const content = await MDXServer(doc.content);
 
   const moreDocs =
     collection === "pages"

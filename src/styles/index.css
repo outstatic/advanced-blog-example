@@ -86,3 +86,86 @@
     @apply before:w-[calc(100%+0.5rem)];
   }
 }
+
+.prose-outstatic {
+  --tw-prose-code: #000;
+}
+
+.prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  @apply p-1 border rounded-sm bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100;
+}
+
+.prose
+  pre
+  :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  @apply bg-transparent p-4 border-0;
+}
+
+.prose
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::before, .prose
+  :where(code):not(
+    :where([class~="not-prose"], [class~="not-prose"] *)
+  )::after {
+  content: "";
+}
+
+.prose-outstatic :where(code):not(:where([class~='not-prose'] *))::before,
+.prose-outstatic :where(code):not(:where([class~='not-prose'] *))::after {
+  content: '';
+}
+
+.prose-outstatic > ol > li > :last-child,
+.prose-outstatic > ul > li > :last-child {
+  margin-bottom: 0;
+}
+.prose-outstatic > ol > li > :first-child,
+.prose-outstatic > ul > li > :first-child {
+  margin-top: 0;
+}
+
+.prose-outstatic blockquote p:first-of-type::before,
+.prose-outstatic blockquote p:last-of-type::after {
+  content: '';
+}
+
+.prose-outstatic :where(pre code):not(:where([class~='not-prose'] *)) {
+  font-size: 1.1em;
+}
+
+.prose-outstatic :where(h1, h2, h3, h4) {
+  scroll-margin-top: 100px;
+  position: relative;
+  display: block;
+  margin-right: 0.5rem;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+
+.prose-outstatic :where(h1, h2, h3, h4):hover {
+  text-decoration: underline;
+}
+
+/** HASH ANCHOR */
+.hash-anchor {
+  @apply inset-y-0 w-full;
+  position: absolute;
+  background-image: none;
+  transition: none;
+}
+
+.hash-anchor:hover {
+  text-decoration: underline;
+}
+
+.hash-anchor:hover:after,
+.hash-anchor:focus:after {
+  visibility: visible;
+}
+
+.hash-anchor:after {
+  @apply invisible absolute -right-5 top-1/2 -translate-y-1/2 text-lg;
+  content: '#';
+}

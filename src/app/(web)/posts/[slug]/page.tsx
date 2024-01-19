@@ -1,5 +1,6 @@
 import DocHero from "@/components/doc-hero";
-import markdownToHtml from "@/lib/markdownToHtml";
+import MDXComponent from "@/components/mdx/mdx-component";
+import MDXServer from "@/lib/mdx-server";
 import { absoluteUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
@@ -55,10 +56,9 @@ export default async function Post(params: Params) {
     <article className="mb-32">
       <DocHero {...post} />
       <div className="max-w-2xl mx-auto">
-        <div
-          className="prose prose-outstatic"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="prose prose-outstatic">
+          <MDXComponent content={post.content} />
+        </div>
       </div>
     </article>
   );
@@ -84,7 +84,7 @@ async function getData({ params }: Params) {
     notFound();
   }
 
-  const content = await markdownToHtml(post.content);
+  const content = await MDXServer(post.content);
 
   return {
     ...post,

@@ -22,7 +22,7 @@ export default function DocHero(doc: Doc) {
         ? doc.tags.map(({ label }) => (
             <span
               key="label"
-              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+              className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-4"
             >
               {label}
             </span>
@@ -35,7 +35,7 @@ export default function DocHero(doc: Doc) {
         Written on <DateFormatter dateString={doc.publishedAt} /> by{" "}
         {doc?.author?.name || ""}.
       </div>
-      <hr className="border-neutral-200 mt-10 mb-10" />
+      <hr className="border-gray-200 mt-10 mb-10" />
     </>
   );
 }
