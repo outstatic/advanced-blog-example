@@ -5,7 +5,7 @@ author:
   name: 'Andre Vitorio'
   picture: 'https://avatars.githubusercontent.com/u/1417109?v=4'
 slug: 'add-a-free-cms-to-your-nextjs-website-with-outstatic'
-description: 'Learn how to seamlessly integrate Outstatic into your Next.js website for optimized content management and improved performance in under 10 minutes.'
+description: 'Learn how to seamlessly integrate Outstatic into your Next.js website.'
 coverImage: '/images/outstatic-landing-M3MT.png'
 tags: [{"value":"outstatic","label":"Outstatic"},{"value":"nextJs","label":"NextJs"}]
 publishedAt: '2024-01-11T20:59:36.724Z'
@@ -104,8 +104,8 @@ If everything is setup correctly, then you'll see a login page and will be able 
 
 ![](https://outstatic.com/images/outstatic-login-screen-I4Mz.png)
 
-Now that you have completed the installation and setup process of Outstatic, you can start creating content for your website. 
+Now that you have completed the installation and setup process of Outstatic, you can start creating content for your website.
 
-For more information on managing your website's content and fetching data from Outstatic, please refer to the [Outstatic documentation](https://outstatic.com/docs). 
+For more information on managing your website's content and fetching data from Outstatic, please refer to the [Outstatic documentation](https://outstatic.com/docs).
 
 If you have any questions or need assistance, you can join the [GitHub](https://github.com/avitorio/outstatic) or [Discord](https://discord.gg/qEjtpn7E6F) community. Enjoy using Outstatic!
