@@ -71,8 +71,8 @@ export default async function Document(params: Params) {
 
   if (doc.collection === "pages") {
     return (
-      <article className="mb-32">
-        <div className="prose lg:prose-2xl prose-outstatic">
+      <article className="mb-32 py-24">
+        <div className="prose md:prose-xl prose-outstatic">
           <MDXComponent content={doc.content} />
         </div>
       </article>
@@ -112,6 +112,7 @@ async function getData({ params }: Params) {
     if (collection !== "pages") {
       const docs = await db
         .find({ collection }, ["title", "slug", "coverImage", "description"])
+        .sort({ publishedAt: -1 })
         .toArray();
 
       // if we have docs, we are on a collection archive

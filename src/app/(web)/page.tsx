@@ -60,6 +60,7 @@ async function getData() {
       "tags",
     ])
     .sort({ publishedAt: -1 })
+    .limit(3)
     .toArray();
 
   // get remaining collections
@@ -80,6 +81,7 @@ async function getData() {
       ]
     )
     .sort({ publishedAt: -1 })
+    .limit(3)
     .toArray();
 
   // group remaining collections by collection

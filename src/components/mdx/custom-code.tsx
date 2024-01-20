@@ -8,8 +8,7 @@ export const Pre = (props: ComponentPropsWithRef<"pre">) => {
   const [isCopied, setIsCopied] = useState(false);
   const [copy] = useCopyToClipboard();
   return (
-    <pre {...props} className="p-0 relative" ref={preRef}>
-      {props.children}
+    <div className="p-0 relative">
       <div className="flex absolute top-2 right-4 rounded-md border border-gray-600">
         <button
           onClick={() => {
@@ -20,16 +19,27 @@ export const Pre = (props: ComponentPropsWithRef<"pre">) => {
           }}
           title="Copy code"
           className={clsx([
-            "hidden rounded px-1 transition-colors md:flex items-center",
+            "hidden rounded px-1 transition-colors md:flex items-center gap-1 text-sm",
             "border border-gray-300 dark:border-gray-600",
-            "text-gray-700 dark:text-gray-300",
-            "bg-[#f2f7fc] hover:bg-gray-100 dark:bg-[#22272e] dark:hover:bg-gray-700",
+            "text-gray-700",
+            "bg-gray-50 hover:bg-gray-300",
           ])}
         >
-          {isCopied ? <><Check size={14} /> done</> : <><Copy size={14} /> copy</>}
+          {isCopied ? (
+            <>
+              <Check size={14} /> done
+            </>
+          ) : (
+            <>
+              <Copy size={14} /> copy
+            </>
+          )}
         </button>
       </div>
-    </pre>
+      <pre {...props} ref={preRef}>
+        {props.children}
+      </pre>
+    </div>
   );
 };
 

@@ -98,22 +98,23 @@
 .prose
   pre
   :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  @apply bg-transparent p-4 border-0;
+  @apply bg-transparent dark:bg-transparent border-0 whitespace-break-spaces pt-4;
 }
 
 .prose
   :where(code):not(
     :where([class~="not-prose"], [class~="not-prose"] *)
-  )::before, .prose
+  )::before,
+.prose
   :where(code):not(
     :where([class~="not-prose"], [class~="not-prose"] *)
   )::after {
   content: "";
 }
 
-.prose-outstatic :where(code):not(:where([class~='not-prose'] *))::before,
-.prose-outstatic :where(code):not(:where([class~='not-prose'] *))::after {
-  content: '';
+.prose-outstatic :where(code):not(:where([class~="not-prose"] *))::before,
+.prose-outstatic :where(code):not(:where([class~="not-prose"] *))::after {
+  content: "";
 }
 
 .prose-outstatic > ol > li > :last-child,
@@ -127,10 +128,10 @@
 
 .prose-outstatic blockquote p:first-of-type::before,
 .prose-outstatic blockquote p:last-of-type::after {
-  content: '';
+  content: "";
 }
 
-.prose-outstatic :where(pre code):not(:where([class~='not-prose'] *)) {
+.prose-outstatic :where(pre code):not(:where([class~="not-prose"] *)) {
   font-size: 1.1em;
 }
 
@@ -167,5 +168,5 @@
 
 .hash-anchor:after {
   @apply invisible absolute -right-5 top-1/2 -translate-y-1/2 text-lg;
-  content: '#';
+  content: "#";
 }

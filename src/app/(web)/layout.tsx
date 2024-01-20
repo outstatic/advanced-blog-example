@@ -48,7 +48,7 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="max-w-6xl mx-auto px-5 h-full pt-8 md:pt-24">
+          <div className="max-w-6xl mx-auto px-5 h-full pt-8 md:py-24">
             {children}
           </div>
           <Footer />
