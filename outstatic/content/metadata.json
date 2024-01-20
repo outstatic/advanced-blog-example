@@ -1,6 +1,6 @@
 {
-  "commit": "f84532f09eef115cff53f99d714a1aa89abf488a",
-  "generated": "2024-01-20T01:48:45.970Z",
+  "commit": "e060981ada199913f4b37f1181e43ff0bbab1451",
+  "generated": "2024-01-20T02:21:39.147Z",
   "metadata": [
     {
       "__outstatic": {
@@ -131,6 +131,24 @@
       "slug": "pacy-premium-design",
       "status": "published",
       "title": "Pacy - Premium Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "e060981ada199913f4b37f1181e43ff0bbab1451",
+        "hash": "978305730",
+        "path": "outstatic/content/projects/outstatic-the-cms-for-nextjs.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/outstatic-screenshot-Y0ND.png",
+      "description": "Outstatic is an Open Source CMS that offers a user-friendly interface for managing and organizing website content.",
+      "publishedAt": "2024-01-20T01:53:49.631Z",
+      "slug": "outstatic-the-cms-for-nextjs",
+      "status": "published",
+      "title": "Outstatic - The CMS for Next.js"
     }
   ]
 }
