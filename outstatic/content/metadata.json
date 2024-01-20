@@ -1,6 +1,6 @@
 {
   "commit": "95ff10694d16420b96e2145329582e9c100aae70",
-  "generated": "2024-01-20T02:35:14.779Z",
+  "generated": "2024-01-20T02:36:17.267Z",
   "metadata": [
     {
       "__outstatic": {
@@ -135,7 +135,7 @@
     {
       "__outstatic": {
         "commit": "95ff10694d16420b96e2145329582e9c100aae70",
-        "hash": "2593036194",
+        "hash": "2814254856",
         "path": "outstatic/content/projects/pacy-premium-design.md"
       },
       "author": {
@@ -145,7 +145,7 @@
       "collection": "projects",
       "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
       "description": "Pacy provides high quality design engineering as a subscription.",
-      "publishedAt": "2024-12-11T06:26:04.000Z",
+      "publishedAt": "2024-01-10T06:26:04.000Z",
       "slug": "pacy-premium-design",
       "status": "published",
       "title": "Pacy - Premium Design"
