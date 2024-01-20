@@ -162,6 +162,7 @@ async function getData({ params }: Params) {
             "coverImage",
             "description",
           ])
+          .sort({ publishedAt: -1 })
           .toArray();
 
   return {
