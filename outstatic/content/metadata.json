@@ -1,6 +1,6 @@
 {
-  "commit": "99fc5a51ad42a51531f2b7b09dfd9f53704ec226",
-  "generated": "2024-01-20T00:26:08.095Z",
+  "commit": "f84532f09eef115cff53f99d714a1aa89abf488a",
+  "generated": "2024-01-20T01:48:45.970Z",
   "metadata": [
     {
       "__outstatic": {
@@ -70,24 +70,6 @@
     },
     {
       "__outstatic": {
-        "commit": "dde38afe871193e147b2adaffdaa31be3d279248",
-        "hash": "375966680",
-        "path": "outstatic/content/projects/pacy-premium-design.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "projects",
-      "coverImage": "",
-      "description": "",
-      "publishedAt": "2023-12-28T06:26:04.043Z",
-      "slug": "pacy-premium-design",
-      "status": "published",
-      "title": "Pacy - Premium Design"
-    },
-    {
-      "__outstatic": {
         "commit": "217eec1579c1aa72999679b06a8a88cf54c1dcbc",
         "hash": "2721406306",
         "path": "outstatic/content/posts/add-a-free-cms-to-your-nextjs-website-with-outstatic.md"
@@ -131,6 +113,24 @@
       "slug": "about",
       "status": "published",
       "title": "About Me"
+    },
+    {
+      "__outstatic": {
+        "commit": "f84532f09eef115cff53f99d714a1aa89abf488a",
+        "hash": "3872219506",
+        "path": "outstatic/content/projects/pacy-premium-design.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
+      "description": "Pacy was built in 2022 to provide high quality design as a subscription services. We strive to deliver exceptional design and web assets that exceed our clients' expectations.",
+      "publishedAt": "2024-12-11T06:26:04.000Z",
+      "slug": "pacy-premium-design",
+      "status": "published",
+      "title": "Pacy - Premium Design"
     }
   ]
 }
