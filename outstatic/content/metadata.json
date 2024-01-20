@@ -1,6 +1,6 @@
 {
-  "commit": "e060981ada199913f4b37f1181e43ff0bbab1451",
-  "generated": "2024-01-20T02:21:39.147Z",
+  "commit": "95ff10694d16420b96e2145329582e9c100aae70",
+  "generated": "2024-01-20T02:35:14.779Z",
   "metadata": [
     {
       "__outstatic": {
@@ -116,24 +116,6 @@
     },
     {
       "__outstatic": {
-        "commit": "f84532f09eef115cff53f99d714a1aa89abf488a",
-        "hash": "3872219506",
-        "path": "outstatic/content/projects/pacy-premium-design.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "projects",
-      "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
-      "description": "Pacy was built in 2022 to provide high quality design as a subscription services. We strive to deliver exceptional design and web assets that exceed our clients' expectations.",
-      "publishedAt": "2024-12-11T06:26:04.000Z",
-      "slug": "pacy-premium-design",
-      "status": "published",
-      "title": "Pacy - Premium Design"
-    },
-    {
-      "__outstatic": {
         "commit": "e060981ada199913f4b37f1181e43ff0bbab1451",
         "hash": "978305730",
         "path": "outstatic/content/projects/outstatic-the-cms-for-nextjs.md"
@@ -149,6 +131,24 @@
       "slug": "outstatic-the-cms-for-nextjs",
       "status": "published",
       "title": "Outstatic - The CMS for Next.js"
+    },
+    {
+      "__outstatic": {
+        "commit": "95ff10694d16420b96e2145329582e9c100aae70",
+        "hash": "2593036194",
+        "path": "outstatic/content/projects/pacy-premium-design.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
+      "description": "Pacy provides high quality design engineering as a subscription.",
+      "publishedAt": "2024-12-11T06:26:04.000Z",
+      "slug": "pacy-premium-design",
+      "status": "published",
+      "title": "Pacy - Premium Design"
     }
   ]
 }

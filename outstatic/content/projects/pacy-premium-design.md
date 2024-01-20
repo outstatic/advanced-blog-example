@@ -1,13 +1,13 @@
 ---
-title: "Pacy - Premium Design"
-status: "published"
+title: 'Pacy - Premium Design'
+status: 'published'
 author:
-  name: "Andre Vitorio"
-  picture: "https://avatars.githubusercontent.com/u/1417109?v=4"
-slug: "pacy-premium-design"
-description: "Pacy was built in 2022 to provide high quality design engineering as a subscription services."
-coverImage: "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png"
-publishedAt: "2024-12-11T06:26:04.000Z"
+  name: 'Andre Vitorio'
+  picture: 'https://avatars.githubusercontent.com/u/1417109?v=4'
+slug: 'pacy-premium-design'
+description: 'Pacy provides high quality design engineering as a subscription.'
+coverImage: '/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png'
+publishedAt: '2024-12-11T06:26:04.000Z'
 ---
 
 At [Pacy](https://Pacy.co), our goal is to provide premium design services through a subscription model, allowing you to upgrade your design department without the hassle of hiring in-house. With unlimited requests and a fast turnaround time, we ensure transparency and no hidden costs.
