@@ -1,11 +1,11 @@
 {
-  "commit": "95ff10694d16420b96e2145329582e9c100aae70",
-  "generated": "2024-01-20T02:36:17.267Z",
+  "commit": "563dccfaa09d6a1581743e5c50e99ef9cb232e6c",
+  "generated": "Sat, 20 Jan 2024 03:06:45 GMT",
   "metadata": [
     {
       "__outstatic": {
-        "commit": "2e47122b5b6d49d6d1ddb15bcd33edc4a0c1256e",
-        "hash": "217348983",
+        "commit": "375ca4629d57e6f05cb7f61debb7e258bf3947d4",
+        "hash": "2477969654",
         "path": "outstatic/content/pages/home.md"
       },
       "author": {
@@ -19,6 +19,77 @@
       "slug": "home",
       "status": "published",
       "title": "Home"
+    },
+    {
+      "__outstatic": {
+        "commit": "9637bcf0d7aa912e22e9e0031dd679244f9c9527",
+        "hash": "2309931423",
+        "path": "outstatic/content/pages/about.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "pages",
+      "coverImage": "",
+      "description": "I'm Andre, a product developer and designer from Maceió, Brazil",
+      "publishedAt": "2023-12-28T18:49:02.348Z",
+      "slug": "about",
+      "status": "published",
+      "title": "About Me"
+    },
+    {
+      "__outstatic": {
+        "commit": "9a3b0185df6ff19a3ba522ec073a07d55131b497",
+        "hash": "2814254856",
+        "path": "outstatic/content/projects/pacy-premium-design.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
+      "description": "Pacy provides high quality design engineering as a subscription.",
+      "publishedAt": "2024-01-10T06:26:04.000Z",
+      "slug": "pacy-premium-design",
+      "status": "published",
+      "title": "Pacy - Premium Design"
+    },
+    {
+      "__outstatic": {
+        "commit": "9dcf0172a2ecbf2fc49795c8122644bfb510d2a0",
+        "hash": "3054560019",
+        "path": "outstatic/content/projects/outstatic-the-cms-for-nextjs.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/outstatic-screenshot-Y0ND.png",
+      "description": "Outstatic is an Open Source CMS that offers a user-friendly interface for managing and organizing website content.",
+      "publishedAt": "2024-01-20T01:53:49.631Z",
+      "slug": "outstatic-the-cms-for-nextjs",
+      "status": "published",
+      "title": "Outstatic - The CMS for Next.js"
+    },
+    {
+      "__outstatic": {
+        "commit": "d2f316fd04def3347c906f5227da5daf79971f61",
+        "hash": "4086614036",
+        "path": "outstatic/content/posts/nothing-wrong.md"
+      },
+      "author": {
+        "name": "Andre Vitorio"
+      },
+      "collection": "posts",
+      "coverImage": "/images/industrial-pattern.png",
+      "description": "One more day, one more joy. I feel blessed.",
+      "publishedAt": "2022-09-14T17:55:40.452Z",
+      "slug": "nothing-wrong",
+      "status": "published",
+      "title": "Nothing is wrong. Everything is perfect"
     },
     {
       "__outstatic": {
@@ -53,24 +124,7 @@
     },
     {
       "__outstatic": {
-        "commit": "d2f316fd04def3347c906f5227da5daf79971f61",
-        "hash": "4086614036",
-        "path": "outstatic/content/posts/nothing-wrong.md"
-      },
-      "author": {
-        "name": "Andre Vitorio"
-      },
-      "collection": "posts",
-      "coverImage": "/images/industrial-pattern.png",
-      "description": "One more day, one more joy. I feel blessed.",
-      "publishedAt": "2022-09-14T17:55:40.452Z",
-      "slug": "nothing-wrong",
-      "status": "published",
-      "title": "Nothing is wrong. Everything is perfect"
-    },
-    {
-      "__outstatic": {
-        "commit": "217eec1579c1aa72999679b06a8a88cf54c1dcbc",
+        "commit": "056337c6ec4b1a28f693f8068e1a116eaef5f7e7",
         "hash": "2721406306",
         "path": "outstatic/content/posts/add-a-free-cms-to-your-nextjs-website-with-outstatic.md"
       },
@@ -95,60 +149,6 @@
         }
       ],
       "title": "Add a free CMS to your Next.js website with Outstatic"
-    },
-    {
-      "__outstatic": {
-        "commit": "99fc5a51ad42a51531f2b7b09dfd9f53704ec226",
-        "hash": "2309931423",
-        "path": "outstatic/content/pages/about.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "pages",
-      "coverImage": "",
-      "description": "I'm Andre, a product developer and designer from Maceió, Brazil",
-      "publishedAt": "2023-12-28T18:49:02.348Z",
-      "slug": "about",
-      "status": "published",
-      "title": "About Me"
-    },
-    {
-      "__outstatic": {
-        "commit": "e060981ada199913f4b37f1181e43ff0bbab1451",
-        "hash": "978305730",
-        "path": "outstatic/content/projects/outstatic-the-cms-for-nextjs.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "projects",
-      "coverImage": "/images/outstatic-screenshot-Y0ND.png",
-      "description": "Outstatic is an Open Source CMS that offers a user-friendly interface for managing and organizing website content.",
-      "publishedAt": "2024-01-20T01:53:49.631Z",
-      "slug": "outstatic-the-cms-for-nextjs",
-      "status": "published",
-      "title": "Outstatic - The CMS for Next.js"
-    },
-    {
-      "__outstatic": {
-        "commit": "95ff10694d16420b96e2145329582e9c100aae70",
-        "hash": "2814254856",
-        "path": "outstatic/content/projects/pacy-premium-design.md"
-      },
-      "author": {
-        "name": "Andre Vitorio",
-        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
-      },
-      "collection": "projects",
-      "coverImage": "/images/e6b70073-0b98-435e-9577-a285d3f431fa-I3MD.png",
-      "description": "Pacy provides high quality design engineering as a subscription.",
-      "publishedAt": "2024-01-10T06:26:04.000Z",
-      "slug": "pacy-premium-design",
-      "status": "published",
-      "title": "Pacy - Premium Design"
     }
   ]
 }
