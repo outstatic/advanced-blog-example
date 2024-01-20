@@ -111,7 +111,12 @@ async function getData({ params }: Params) {
   if (!params.slug || params.slug.length !== 2) {
     if (collection !== "pages") {
       const docs = await db
-        .find({ collection }, ["title", "slug", "coverImage", "description"])
+        .find({ collection, status: "published" }, [
+          "title",
+          "slug",
+          "coverImage",
+          "description",
+        ])
         .sort({ publishedAt: -1 })
         .toArray();
 
@@ -156,12 +161,14 @@ async function getData({ params }: Params) {
     collection === "pages"
       ? []
       : await db
-          .find({ collection: params.slug[0], slug: { $ne: params.slug[1] } }, [
-            "title",
-            "slug",
-            "coverImage",
-            "description",
-          ])
+          .find(
+            {
+              collection: params.slug[0],
+              slug: { $ne: params.slug[1] },
+              status: "published",
+            },
+            ["title", "slug", "coverImage", "description"]
+          )
           .sort({ publishedAt: -1 })
           .toArray();
 
