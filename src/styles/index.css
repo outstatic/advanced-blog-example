@@ -145,20 +145,16 @@
   width: fit-content;
 }
 
-.prose-outstatic :where(h1, h2, h3, h4):hover {
+.prose-outstatic:not(.home-intro) :where(h1, h2, h3, h4):hover {
   text-decoration: underline;
 }
 
 /** HASH ANCHOR */
 .hash-anchor {
-  @apply inset-y-0 w-full;
-  position: absolute;
-  background-image: none;
-  transition: none;
+  @apply inset-y-0 w-full absolute transition-none bg-none;
 }
-
 .hash-anchor:hover {
-  text-decoration: underline;
+  @apply underline;
 }
 
 .hash-anchor:hover:after,
