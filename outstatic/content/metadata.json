@@ -1,6 +1,6 @@
 {
-  "commit": "6d34290fd00c2c46f9fdb6fb2932f79aa4c7a637",
-  "generated": "2024-01-19T19:45:37.213Z",
+  "commit": "99fc5a51ad42a51531f2b7b09dfd9f53704ec226",
+  "generated": "2024-01-20T00:26:08.095Z",
   "metadata": [
     {
       "__outstatic": {
@@ -116,8 +116,8 @@
     },
     {
       "__outstatic": {
-        "commit": "cacf7fbaeefd75731dd727e56154346cac0f8e50",
-        "hash": "1685035471",
+        "commit": "99fc5a51ad42a51531f2b7b09dfd9f53704ec226",
+        "hash": "2309931423",
         "path": "outstatic/content/pages/about.md"
       },
       "author": {
@@ -126,7 +126,7 @@
       },
       "collection": "pages",
       "coverImage": "",
-      "description": "",
+      "description": "I'm Andre, a product developer and designer from Maceió, Brazil",
       "publishedAt": "2023-12-28T18:49:02.348Z",
       "slug": "about",
       "status": "published",
