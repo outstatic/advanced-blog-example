@@ -1,6 +1,6 @@
 {
-  "commit": "563dccfaa09d6a1581743e5c50e99ef9cb232e6c",
-  "generated": "Sat, 20 Jan 2024 03:06:45 GMT",
+  "commit": "0e0b687b44bcdfea7d753ea1d4ea2788a427a6f0",
+  "generated": "2024-01-31T06:47:58.450Z",
   "metadata": [
     {
       "__outstatic": {
@@ -149,6 +149,24 @@
         }
       ],
       "title": "Add a free CMS to your Next.js website with Outstatic"
+    },
+    {
+      "__outstatic": {
+        "commit": "0e0b687b44bcdfea7d753ea1d4ea2788a427a6f0",
+        "hash": "3240539151",
+        "path": "outstatic/content/projects/outsidesimulator.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "projects",
+      "coverImage": "/images/outside-simulator-I5MD.webp",
+      "description": "Escape to the Outdoors, Virtually.",
+      "publishedAt": "2024-01-08T06:11:26.000Z",
+      "slug": "outsidesimulator",
+      "status": "published",
+      "title": "OutsideSimulator.com"
     }
   ]
 }
