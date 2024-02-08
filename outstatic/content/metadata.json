@@ -1,6 +1,6 @@
 {
-  "commit": "0e0b687b44bcdfea7d753ea1d4ea2788a427a6f0",
-  "generated": "2024-01-31T06:47:58.450Z",
+  "commit": "5c60349da1c80c2580453f5c605e88513bc8998d",
+  "generated": "2024-02-08T15:51:28.512Z",
   "metadata": [
     {
       "__outstatic": {
@@ -167,6 +167,26 @@
       "slug": "outsidesimulator",
       "status": "published",
       "title": "OutsideSimulator.com"
+    },
+    {
+      "__outstatic": {
+        "commit": "5c60349da1c80c2580453f5c605e88513bc8998d",
+        "hash": "3850671280",
+        "path": "outstatic/content/posts/what-is-outstatic.md"
+      },
+      "author": {
+        "name": "Andre Vitorio",
+        "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
+      },
+      "collection": "posts",
+      "coverImage": "",
+      "description": "",
+      "publishedAt": "2024-01-02T14:41:29.000Z",
+      "slug": "what-is-outstatic",
+      "status": "published",
+      "tags": [
+      ],
+      "title": "What is Outstatic?"
     }
   ]
 }
