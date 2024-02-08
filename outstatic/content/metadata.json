@@ -1,6 +1,6 @@
 {
-  "commit": "5c60349da1c80c2580453f5c605e88513bc8998d",
-  "generated": "2024-02-08T15:51:28.512Z",
+  "commit": "b67805c45e65fb8660bca739a054e4ffb834a68b",
+  "generated": "2024-02-08T15:58:33.960Z",
   "metadata": [
     {
       "__outstatic": {
@@ -170,23 +170,23 @@
     },
     {
       "__outstatic": {
-        "commit": "5c60349da1c80c2580453f5c605e88513bc8998d",
-        "hash": "3850671280",
-        "path": "outstatic/content/posts/what-is-outstatic.md"
+        "commit": "b67805c45e65fb8660bca739a054e4ffb834a68b",
+        "hash": "33873928",
+        "path": "outstatic/content/posts/the-next-steps-for-outstatic.md"
       },
       "author": {
         "name": "Andre Vitorio",
         "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
       },
       "collection": "posts",
-      "coverImage": "",
-      "description": "",
+      "coverImage": "/images/1500x500-cxMz.jpeg",
+      "description": "The plan was simple: start a blog and write about my journey as a developer. But that's exactly the problem, I'm a developer. ",
       "publishedAt": "2024-01-02T14:41:29.000Z",
-      "slug": "what-is-outstatic",
+      "slug": "the-next-steps-for-outstatic",
       "status": "published",
       "tags": [
       ],
-      "title": "What is Outstatic?"
+      "title": "Far Out - The Next Steps for Outstatic "
     }
   ]
 }
