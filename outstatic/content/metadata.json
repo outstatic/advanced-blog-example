@@ -1,6 +1,6 @@
 {
-  "commit": "6de9942ba636b776ad2e1332d759904e3ebf5886",
-  "generated": "2024-02-08T15:59:34.684Z",
+  "commit": "97095f5bb17c1597b7e21634fb30ddb09e825f9e",
+  "generated": "2024-02-08T16:14:58.864Z",
   "metadata": [
     {
       "__outstatic": {
@@ -170,8 +170,8 @@
     },
     {
       "__outstatic": {
-        "commit": "6de9942ba636b776ad2e1332d759904e3ebf5886",
-        "hash": "3926659042",
+        "commit": "97095f5bb17c1597b7e21634fb30ddb09e825f9e",
+        "hash": "3612827223",
         "path": "outstatic/content/posts/the-next-steps-for-outstatic.md"
       },
       "author": {

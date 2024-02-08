@@ -67,7 +67,7 @@ In terms of product features, there are a couple of things I believe would be am
 
 - Custom field creation. Allow users to add Document metadata.
 - Internationalisation
-- Accessibility (perhaps using <https://www.radix-ui.com/>)
+- Accessibility (perhaps using [radix ui](https://www.radix-ui.com/))
 - Support for other git providers such as Gitlab and Bitbucket.
 - Support for other data storage options, maybe even external databases.
 - Eventually support for other authentication methods if data is stored somewhere other than git.
