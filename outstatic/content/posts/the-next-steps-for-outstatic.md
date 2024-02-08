@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/1417109?v=4'
 slug: 'the-next-steps-for-outstatic'
 description: 'The plan was simple: start a blog and write about my journey as a developer. But that''s exactly the problem, I''m a developer. '
-coverImage: '/images/1500x500-cxMz.jpeg'
+coverImage: '/images/1500x500-Q3ND.webp'
 tags: []
 publishedAt: '2024-01-02T14:41:29.000Z'
 ---
@@ -67,7 +67,7 @@ In terms of product features, there are a couple of things I believe would be am
 
 - Custom field creation. Allow users to add Document metadata.
 - Internationalisation
-- Accessibility (perhaps using [https://www.radix-ui.com/](https://www.radix-ui.com/))
+- Accessibility (perhaps using <https://www.radix-ui.com/>)
 - Support for other git providers such as Gitlab and Bitbucket.
 - Support for other data storage options, maybe even external databases.
 - Eventually support for other authentication methods if data is stored somewhere other than git.

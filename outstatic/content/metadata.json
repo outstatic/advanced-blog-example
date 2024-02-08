@@ -1,6 +1,6 @@
 {
-  "commit": "b67805c45e65fb8660bca739a054e4ffb834a68b",
-  "generated": "2024-02-08T15:58:33.960Z",
+  "commit": "6de9942ba636b776ad2e1332d759904e3ebf5886",
+  "generated": "2024-02-08T15:59:34.684Z",
   "metadata": [
     {
       "__outstatic": {
@@ -170,8 +170,8 @@
     },
     {
       "__outstatic": {
-        "commit": "b67805c45e65fb8660bca739a054e4ffb834a68b",
-        "hash": "33873928",
+        "commit": "6de9942ba636b776ad2e1332d759904e3ebf5886",
+        "hash": "3926659042",
         "path": "outstatic/content/posts/the-next-steps-for-outstatic.md"
       },
       "author": {
@@ -179,7 +179,7 @@
         "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
       },
       "collection": "posts",
-      "coverImage": "/images/1500x500-cxMz.jpeg",
+      "coverImage": "/images/1500x500-Q3ND.webp",
       "description": "The plan was simple: start a blog and write about my journey as a developer. But that's exactly the problem, I'm a developer. ",
       "publishedAt": "2024-01-02T14:41:29.000Z",
       "slug": "the-next-steps-for-outstatic",
