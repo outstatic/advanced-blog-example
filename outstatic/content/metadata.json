@@ -1,6 +1,6 @@
 {
-  "commit": "011d7a1e689fccdf8757b00390a71a34f0f73e2f",
-  "generated": "2024-02-10T22:16:52.132Z",
+  "commit": "dc38c35203acf74ea134d1b2077000ab94b90c9c",
+  "generated": "2024-02-10T22:17:00.119Z",
   "metadata": [
     {
       "__outstatic": {
@@ -73,23 +73,6 @@
       "slug": "outstatic-the-cms-for-nextjs",
       "status": "published",
       "title": "Outstatic - The CMS for Next.js"
-    },
-    {
-      "__outstatic": {
-        "commit": "d2f316fd04def3347c906f5227da5daf79971f61",
-        "hash": "4086614036",
-        "path": "outstatic/content/posts/nothing-wrong.md"
-      },
-      "author": {
-        "name": "Andre Vitorio"
-      },
-      "collection": "posts",
-      "coverImage": "/images/industrial-pattern.png",
-      "description": "One more day, one more joy. I feel blessed.",
-      "publishedAt": "2022-09-14T17:55:40.452Z",
-      "slug": "nothing-wrong",
-      "status": "published",
-      "title": "Nothing is wrong. Everything is perfect"
     },
     {
       "__outstatic": {
