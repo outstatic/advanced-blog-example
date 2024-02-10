@@ -54,7 +54,7 @@ const Footer = () => {
               href="https://linkedin.com/in/andrevitorio"
               target="_blank"
             >
-              <LinkedinIcon className="h-6 w-6" />
+              <LinkedinIcon className="h-6 w-6" aria-label="LinkedIn" />
             </Link>
           </div>
         </div>

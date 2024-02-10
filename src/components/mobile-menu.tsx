@@ -21,7 +21,7 @@ export const MobileMenu = ({ pages, collections }: MenuProps) => {
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger>
           <div className="p-2">
-            <Menu />
+            <Menu aria-label="open menu" />
           </div>
         </DrawerTrigger>
         <DrawerContent>
