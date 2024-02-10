@@ -17,7 +17,7 @@ export const MobileMenu = ({ pages, collections }: MenuProps) => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="block md:hidden">
+    <div className="block md:hidden px-2">
       <Drawer open={open} onOpenChange={setOpen}>
         <DrawerTrigger>
           <div className="p-2">

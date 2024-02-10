@@ -1,3 +1,4 @@
+import { BuiltWithOutstatic } from "@/components/built-with-outstatic";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -42,7 +43,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="relative pb-48 md:pb-32 min-h-screen">
+      <body className="relative pb-56 md:pb-36 min-h-screen">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -50,9 +51,10 @@ export default function RootLayout({
           disableTransitionOnChange
         >
           <Header />
-          <div className="max-w-6xl mx-auto px-5 h-full pt-8 md:py-24">
+          <div className="relative max-w-6xl mx-auto px-5 h-full pt-8 md:py-24">
             {children}
           </div>
+          <BuiltWithOutstatic fixed />
           <Footer />
         </ThemeProvider>
       </body>

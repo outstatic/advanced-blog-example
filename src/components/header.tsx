@@ -18,10 +18,10 @@ const Header = async () => {
 
   return (
     <header className="py-4 fixed bottom-0 border-t md:bottom-auto md:top-0 w-full z-20 border-b bg-background">
-      <nav className="max-w-6xl mx-auto px-5 w-full layout flex items-center justify-between">
+      <nav className="max-w-6xl mx-auto w-full layout flex items-center justify-between">
         <Link
           href="/"
-          className="hover:text-gray-700 underline-offset-2 font-semibold transition-all hover:scale-105"
+          className="hover:text-slate-900 hover:shadow-xl hover:-rotate-1 px-5 hover:border-b underline-offset-2 font-semibold transition-all hover:scale-105"
         >
           Andre Vitorio
         </Link>
