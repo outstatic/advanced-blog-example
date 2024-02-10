@@ -6,7 +6,7 @@ author:
   picture: 'https://avatars.githubusercontent.com/u/1417109?v=4'
 slug: 'welcome-to-outstatic'
 description: 'Thank you for choosing Outstatic to create your website! We look forward to helping you every step of the way.'
-coverImage: '/images/welcome-to-outstatic-I5OD.png'
+coverImage: '/images/welcome-to-outstatic-g3Mz.png'
 tags: [{"value":"outstatic","label":"Outstatic"},{"value":"nextJs","label":"NextJs"}]
 publishedAt: '2024-02-10T01:41:03.484Z'
 ---
