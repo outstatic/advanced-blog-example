@@ -19,10 +19,13 @@ interface Params {
 }
 
 export async function generateMetadata(params: Params): Promise<Metadata> {
-  const { doc } = await getData(params);
+  const { doc, moreDocs } = await getData(params);
 
   if (!doc) {
-    return {};
+    return {
+      title: `All ${moreDocs.collection}`,
+      description: `All ${moreDocs.collection}`,
+    };
   }
 
   return {

@@ -8,15 +8,17 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://outstatic.com"),
   title: {
-    default: "Outstatic",
-    template: "%s | Outstatic",
+    default: "Andre Vitorio - Design. Develop. Deploy.",
+    template: "%s | Andre Vitorio",
   },
-  description: "A blog starter built with Outstatic.",
+  description:
+    "Lead design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
   openGraph: {
-    title: "Outstatic - A Static Site CMS for Next.js",
-    description: "A blog starter built with Outstatic.",
+    title: "Andre Vitorio - Design. Develop. Deploy.",
+    description:
+      "Lead design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
     url: absoluteUrl("/"),
-    siteName: "Next.js",
+    siteName: "AndreVitorio.com",
     images: [
       {
         url: absoluteUrl("/images/og-image.png"),
