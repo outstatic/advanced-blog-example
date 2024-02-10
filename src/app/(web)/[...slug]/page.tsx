@@ -57,7 +57,7 @@ export default async function Document(params: Params) {
   if (!doc) {
     const { docs, collection } = moreDocs;
     return (
-      <div className="mb-16">
+      <div className="pt-24 mb-16">
         {docs.length > 0 && (
           <ContentGrid
             title={`All ${collection}`}
