@@ -7,7 +7,7 @@ author:
 slug: 'the-next-steps-for-outstatic'
 description: 'The plan was simple: start a blog and write about my journey as a developer. But that''s exactly the problem, I''m a developer. '
 coverImage: '/images/1500x500-Q3ND.webp'
-tags: []
+tags: [{"value":"outstatic","label":"Outstatic"},{"value":"nextJs","label":"NextJs"},{"value":"gitHub","label":"GitHub"}]
 publishedAt: '2024-01-02T14:41:29.000Z'
 ---
 
