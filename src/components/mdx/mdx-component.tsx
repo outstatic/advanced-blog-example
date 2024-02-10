@@ -17,19 +17,21 @@ const MDXComponentsMap = {
 
 type MDXComponentProps = {
   content: string;
+  components?: Record<string, any>;
 };
 
-export const MDXComponent = (content: MDXComponentProps) => {
-  const Component = useMemo(
-    () => getMDXComponent(content.content),
-    [content.content]
-  );
+export const MDXComponent = ({
+  content,
+  components = {},
+}: MDXComponentProps) => {
+  const Component = useMemo(() => getMDXComponent(content), [content]);
 
   return (
     <Component
       components={
         {
           ...MDXComponentsMap,
+          ...components,
         } as any
       }
     />

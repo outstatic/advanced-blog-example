@@ -39,7 +39,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className="relative pb-48 md:pb-32 min-h-screen">
         <ThemeProvider
           attribute="class"

@@ -21,7 +21,7 @@ export default function DocHero(doc: Doc) {
       {Array.isArray(doc?.tags)
         ? doc.tags.map(({ label }) => (
             <span
-              key="label"
+              key={label}
               className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2 mt-4"
             >
               {label}

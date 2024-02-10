@@ -51,18 +51,17 @@ export function CustomCode(props: ComponentPropsWithRef<"code">) {
   return (
     <code {...props} data-code-type={language && "code-block"}>
       {language ? (
-        <div className="overflow-x-auto">{props.children}</div>
+        <div className="overflow-x-auto pt-4">{props.children}</div>
       ) : (
         <span>{props.children}</span>
       )}
-
-      {language && (
-        <div className="absolute top-0 right-6 rounded-b-md border border-t-0 border-gray-600 px-3 py-1">
+      {language ? (
+        <div className="absolute top-0 left-4 rounded-b-md border border-t-0 border-gray-600 px-3 py-1">
           <span className="select-none bg-gradient-to-tr from-primary-300 to-primary-400 bg-clip-text font-medium text-white">
             {language}
           </span>
         </div>
-      )}
+      ) : null}
     </code>
   );
 }

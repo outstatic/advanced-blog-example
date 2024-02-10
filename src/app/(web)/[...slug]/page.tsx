@@ -116,6 +116,7 @@ async function getData({ params }: Params) {
           "slug",
           "coverImage",
           "description",
+          "tags",
         ])
         .sort({ publishedAt: -1 })
         .toArray();

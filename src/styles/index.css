@@ -91,21 +91,34 @@
   --tw-prose-code: #000;
 }
 
+.prose :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+  @apply px-4 pb-4 pt-6 border rounded-sm bg-gray-800 dark:bg-gray-800 text-white dark:text-gray-800;
+}
+
+@media (min-width: 768px) {
+  .md\:prose-xl.prose-outstatic
+    :where(pre):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
+    @apply pt-8;
+  }
+}
+
 .prose :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  @apply p-1 border rounded-sm bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-100;
+  @apply px-0 py-1 border rounded-sm bg-gray-800 dark:bg-gray-800 text-white;
 }
 
 .prose
   pre
   :where(code):not(:where([class~="not-prose"], [class~="not-prose"] *)) {
-  @apply bg-transparent dark:bg-transparent border-0 whitespace-break-spaces pt-4;
+  @apply bg-transparent dark:bg-transparent border-0 whitespace-break-spaces;
 }
 
 .prose
+  pre
   :where(code):not(
     :where([class~="not-prose"], [class~="not-prose"] *)
   )::before,
 .prose
+  pre
   :where(code):not(
     :where([class~="not-prose"], [class~="not-prose"] *)
   )::after {
@@ -114,7 +127,7 @@
 
 .prose-outstatic :where(code):not(:where([class~="not-prose"] *))::before,
 .prose-outstatic :where(code):not(:where([class~="not-prose"] *))::after {
-  content: "";
+  color: transparent;
 }
 
 .prose-outstatic > ol > li > :last-child,
