@@ -1,6 +1,6 @@
 {
-  "commit": "a603c85cf154b62a61add6bb96bfb14fe5be0362",
-  "generated": "2024-02-10T02:53:00.195Z",
+  "commit": "a203cb2f0fe0c75e81f84d90756b1d1e110bafaa",
+  "generated": "2024-02-10T03:15:08.444Z",
   "metadata": [
     {
       "__outstatic": {
@@ -190,8 +190,8 @@
     },
     {
       "__outstatic": {
-        "commit": "a603c85cf154b62a61add6bb96bfb14fe5be0362",
-        "hash": "3604925371",
+        "commit": "a203cb2f0fe0c75e81f84d90756b1d1e110bafaa",
+        "hash": "1441677785",
         "path": "outstatic/content/posts/welcome-to-outstatic.md"
       },
       "author": {
@@ -199,7 +199,7 @@
         "picture": "https://avatars.githubusercontent.com/u/1417109?v=4"
       },
       "collection": "posts",
-      "coverImage": "/images/welcome-to-outstatic-gzNz.png",
+      "coverImage": "/images/welcome-to-outstatic-I5OD.png",
       "description": "Thank you for choosing Outstatic to create your website! We look forward to helping you every step of the way.",
       "publishedAt": "2024-02-10T01:41:03.484Z",
       "slug": "welcome-to-outstatic",
