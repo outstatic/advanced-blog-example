@@ -7,6 +7,14 @@ export function absoluteUrl(path: string) {
   }${path}`;
 }
 
+export function ogUrl(title: string) {
+  // Get domain only without last slash
+  const siteUrl = absoluteUrl("/")
+    .replace(/(^\w+:|^)\/\//, "")
+    .replace(/\/$/, "");
+  return absoluteUrl(`/api/og?title=${title}&siteUrl=${siteUrl}`);
+}
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }

@@ -2,7 +2,7 @@ import { BuiltWithOutstatic } from "@/components/built-with-outstatic";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { absoluteUrl } from "@/lib/utils";
+import { absoluteUrl, ogUrl } from "@/lib/utils";
 import "@/styles/index.css";
 import { Metadata } from "next";
 
@@ -13,18 +13,18 @@ export const metadata: Metadata = {
     template: "%s | Andre Vitorio",
   },
   description:
-    "Lead design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
+    "Design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
   openGraph: {
     title: "Andre Vitorio - Design. Develop. Deploy.",
     description:
-      "Lead design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
+      "Design engineer from Maceió, Brazil. I write about web development, software engineering, and more.",
     url: absoluteUrl("/"),
     siteName: "AndreVitorio.com",
     images: [
       {
-        url: absoluteUrl("/images/og-image.png"),
-        width: 1800,
-        height: 1600,
+        url: ogUrl("Andre Vitorio - Design. Develop. Deploy."),
+        width: 1200,
+        height: 630,
       },
     ],
     locale: "en_US",

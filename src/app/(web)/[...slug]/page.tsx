@@ -2,7 +2,7 @@ import ContentGrid from "@/components/content-grid";
 import DocHero from "@/components/doc-hero";
 import MDXComponent from "@/components/mdx/mdx-component";
 import MDXServer from "@/lib/mdx-server";
-import { absoluteUrl } from "@/lib/utils";
+import { absoluteUrl, ogUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { OstDocument } from "outstatic";
@@ -38,7 +38,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       url: absoluteUrl(`/${doc.collection}/${doc.slug}`),
       images: [
         {
-          url: absoluteUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
+          url: ogUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
           width: 1200,
           height: 630,
           alt: doc.title,
@@ -49,7 +49,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       card: "summary_large_image",
       title: doc.title,
       description: doc.description,
-      images: absoluteUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
+      images: ogUrl(doc?.coverImage || `/api/og?title=${doc.title}`),
     },
   };
 }

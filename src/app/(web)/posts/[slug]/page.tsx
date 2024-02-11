@@ -1,7 +1,7 @@
 import DocHero from "@/components/doc-hero";
 import MDXComponent from "@/components/mdx/mdx-component";
 import MDXServer from "@/lib/mdx-server";
-import { absoluteUrl } from "@/lib/utils";
+import { absoluteUrl, ogUrl } from "@/lib/utils";
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { OstDocument } from "outstatic";
@@ -34,7 +34,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       url: absoluteUrl(`/posts/${post.slug}`),
       images: [
         {
-          url: absoluteUrl(post?.coverImage || `/api/og?title=${post.title}`),
+          url: ogUrl(post?.coverImage || `/api/og?title=${post.title}`),
           width: 1200,
           height: 630,
           alt: post.title,
@@ -45,7 +45,7 @@ export async function generateMetadata(params: Params): Promise<Metadata> {
       card: "summary_large_image",
       title: post.title,
       description: post.description,
-      images: absoluteUrl(post?.coverImage || `/api/og?title=${post.title}`),
+      images: ogUrl(post?.coverImage || `/api/og?title=${post.title}`),
     },
   };
 }
